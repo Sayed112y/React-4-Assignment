@@ -1,0 +1,19 @@
+table, th, td {
+  border: 1px solid black;
+}
+
+
+
+a, a:visited {
+  color: black;
+}
+
+a.active {
+  color: red;
+}
+
+form.input{
+  border :50
+}
+input{
+border:0}
