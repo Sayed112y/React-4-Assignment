@@ -1,11 +1,38 @@
-import React from "react";
-import "./style.css";
+import React from 'react';
+import {BrowserRouter as Router, Route, Switch,NavLink,Redirect} from 'react-router-dom';
+import AllIssuesPage from './components/AllIssuesPage';
+import AddIssuePage from './components/AddIssuePage';
+import IssueDetailPage from './components/IssueDetailPage';
+class Links extends React.Component{
+  render()
+  {
+    return(
+      <div>
+        <nav>
+        <NavLink style={{margin:'15px'}} exact activeClassName="active" to="/about">About</NavLink>
+        <NavLink style={{margin:'15px'}} exact activeClassName="active" to="/issue">Issues</NavLink>
+        </nav>
+      </div>
+    );
+  }
+}
 
-export default function App() {
-  return (
-    <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
-    </div>
-  );
+
+export default class App extends React.Component {
+  render() {
+      return (
+        <Router>
+          <div>
+            <Links/>
+            <Switch>
+            <Route  path="/about" render={()=> <h2>About:This application is used to track the status of the issues raised</h2>}/>
+              <Route  path="/issue" component={AllIssuesPage} />
+              <Route path="/addissue" component={AddIssuePage} />
+              <Route path="/issue1/:issuedescription" component={IssueDetailPage} />
+              
+            </Switch>
+          </div>
+        </Router>
+      );
+  }
 }

@@ -1,0 +1,28 @@
+{
+  "issues": [
+    {
+      "id": 1,
+      "issuedescription": "On Clicking Delete, the application crashes",
+      "severity": "critical",
+      "status": "Open"
+    },
+    {
+      "id": 2,
+      "issuedescription": "The heading Add is wrongly displayed as Edit ",
+      "severity": "Minor",
+      "status": "Closed"
+    },
+    {
+      "id": 3,
+      "issuedescription": "The payment functionality is missing",
+      "severity": "Major",
+      "status": "In Progress"
+    },
+    {
+      "issuedescription": "On adding to cart, the item does not get added.",
+      "severity": "Major",
+      "status": "Open",
+      "id": 4
+    }
+  ]
+}
