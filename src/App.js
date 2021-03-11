@@ -25,7 +25,7 @@ export default class App extends React.Component {
           <div>
             <Links/>
             <Switch>
-            <Route  path="/about" render={()=> <h2>About:This application is used to track the status of the issues raised</h2>}/>
+            <Route  path="/about" render={()=> <h2>About - This Application Used To Track Status Of Issues Raised</h2>}/>
               <Route  path="/issue" component={AllIssuesPage} />
               <Route path="/addissue" component={AddIssuePage} />
               <Route path="/issue1/:issuedescription" component={IssueDetailPage} />
