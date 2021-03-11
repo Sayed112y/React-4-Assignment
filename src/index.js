@@ -4,10 +4,21 @@ import './myindex.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+function reportWebVitals({ id, name }) {
+  ('send', 'event', {
+    severity: 'Web Vitals',
+    issuedescription: name
+    //eventValue: Math.round(name === 'CLS' ? value * 1000 : value), // values must be integers
+    //eventLabel: id, // id unique to current page load
+    //nonInteraction: true, // avoids affecting bounce rate
+  });
+}///function reportWebVitals({
+   //issuedescription: name,
+//})
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );

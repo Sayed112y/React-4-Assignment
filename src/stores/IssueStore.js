@@ -46,3 +46,4 @@ Dispatcher.register(action => {
     default:
   }
 });
+export default IssueStore;
